@@ -31,6 +31,6 @@ const props = defineProps({
   border-radius: 10px;
 }
 .img{
-  width:200px;
+  max-width:200px;
 }
 </style>
