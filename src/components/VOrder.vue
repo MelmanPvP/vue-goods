@@ -59,51 +59,53 @@ const onSubmit = handleSubmit(async (formData) => {
 
 <template>
   <div class="inputs">
+    <form>
     <label class="label">
       Enter name
-      <input v-model="name" />
+      <input :id='Math.random() * 100' v-model="name" />
       <span class="error">{{ errors.name }}</span>
     </label>
 
     <label class="label">
       Enter email
-      <input v-model="email" />
+      <input :id='Math.random() * 100' v-model="email" />
       <span class="error">{{ errors.email }}</span>
     </label>
 
     <label class="label">
       Enter birth date
-      <input v-model="birth" placeholder="xx.xx.xxxx" />
+      <input :id='Math.random() * 100' v-model="birth" placeholder="xx.xx.xxxx" />
       <span class="error">{{ errors.birth }}</span>
     </label>
 
     <label class="label">
       Enter country
-      <input v-model="country" />
+      <input :id='Math.random() * 100' v-model="country" />
       <span class="error">{{ errors.country }}</span>
     </label>
 
     <label class="label">
       Enter card number
-      <input v-model="card" />
+      <input :id='Math.random() * 100' v-model="card" />
       <span class="error">{{ errors.card }}</span>
     </label>
 
     <label class="label">
       Enter address
-      <input v-model="address" />
+      <input :id='Math.random() * 100' v-model="address" />
       <span class="error">{{ errors.address }}</span>
     </label>
 
     <label>
       Agree with order processing policy
-      <input type="checkbox" v-model="agreement" />
+      <input :id='Math.random() * 100' type="checkbox" v-model="agreement" />
       <span class="error">{{ errors.agreement }}</span>
     </label>
 
-    <button @click="onSubmit">Send</button>
+    <button type="submit" @click="onSubmit">Send</button>
 
     <p v-if="success">Order placed successfully!</p>
+    </form>
   </div>
 </template>
 

@@ -2,6 +2,7 @@
 import { defineEmits, defineProps } from "vue";
 
 const props = defineProps({
+  id:Number,
   name: String,
   price: [Number, String]
 });
@@ -20,8 +21,8 @@ function updatePrice(e: Event) {
 
 <template>
   <div class="header">
-    <input :value="props.name" @input="updateName" placeholder="Enter name of a product" type="text" />
-    <input :value="props.price" @input="updatePrice" placeholder="Enter max price" type="number" />
+    <input :id = 1 :value="props.name" @input="updateName" placeholder="Enter name of a product" type="text" />
+    <input :id = 2 :value="props.price" @input="updatePrice" placeholder="Enter max price" type="number" />
   </div>
 </template>
 

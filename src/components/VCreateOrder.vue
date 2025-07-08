@@ -33,28 +33,30 @@ function addProduct() {
 
 <template>
   <div class="form">
+    <form>
     <h2>Add New Product</h2>
     <label>
       Title:
-      <input v-model="title" type="text" />
+      <input :id='Math.random() * 100' v-model="title" type="text" />
     </label>
     <label>
       Price:
-      <input v-model="price" type="number" />
+      <input :id='Math.random() * 100' v-model="price" type="number" />
     </label>
     <label>
       Description:
-      <textarea v-model="description" />
+      <textarea rows="2" cols="30" :id='Math.random() * 100' v-model="description" />
     </label>
     <label>
       Category:
-      <input v-model="category" type="text" />
+      <input :id='Math.random() * 100' v-model="category" type="text" />
     </label>
     <label>
       Image URL:
-      <input v-model="image" type="text" />
+      <input :id='Math.random() * 100' v-model="image" type="text" />
     </label>
-    <button @click="addProduct">Add Product</button>
+    <button type="submit" @click="addProduct">Add Product</button>
+    </form>
   </div>
 </template>
 
